@@ -36,8 +36,8 @@
           <tfoot>
             <tr>
               <td>
-                <input type="text" placeholder="請輸入優惠碼test3">
-                <button type="button">確認優惠碼</button>
+                <input type="text" placeholder="請輸入優惠碼test3" v-model="CouponText.data.code">
+                <button type="button" @click.prevent="CouponCheck">確認優惠碼</button>
               </td>
               <td colspan="3" class="text-end">總計 : {{CartData.data.final_total}}</td>
             </tr>
@@ -74,7 +74,13 @@ export default {
     const CartData = reactive({
       data: {},
     });
-      //   取得購物車列表
+    const CouponText = reactive({
+      data: {
+        code: '',
+      },
+    });
+
+    //   取得購物車列表
     const GetCartList = () => {
       axios.get(`${process.env.VUE_APP_ALL_APIPATH}/cart`).then((res) => {
         if (res.data.success) {
@@ -118,14 +124,28 @@ export default {
         name: 'order',
       });
     };
+    // 優惠券使用
+    const CouponCheck = () => {
+      axios.post(`${process.env.VUE_APP_ALL_APIPATH}/coupon`, CouponText).then((res) => {
+        if (res.data.success) {
+          alert(res.data.message);
+        } else {
+          alert(res.data.message);
+        }
+      }).catch((err) => {
+        alert(err.message);
+      });
+    };
     onMounted(() => {
       GetCartList();
     });
     return {
+      CouponText,
       CartData,
       DelSingleItem,
       DelAllItem,
       PushToOrder,
+      CouponCheck,
     };
   },
 
