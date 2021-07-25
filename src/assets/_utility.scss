@@ -1,0 +1,23 @@
+.container {
+    width: 100%;
+
+    .row {
+        max-width: 414px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        @include pad {
+            max-width: 768px;
+        }
+
+        @include pc {
+            max-width: 1440px;
+        }
+    }
+}
+
+.m-auto{
+    margin:0 auto !important;
+}

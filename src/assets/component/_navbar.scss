@@ -1,0 +1,57 @@
+.container-nav {
+    width: 100%;
+    position: fixed;
+
+    .row-nav {
+        max-width: 414px;
+        margin:0 auto !important;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    .logo {
+        font-family: 'Monoton', cursive;
+        font-size: 48px;
+
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-item {
+        display: flex;
+
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-item li {
+        font-size: 24px;
+        margin: 0 0 0 24px;
+
+        background: rgba(255, 255, 255, 0.1);
+    }
+}
+
+@include pad {
+    .container-nav {
+        .row-nav {
+            max-width: 768px;
+        }
+    }
+}
+
+@include pc {
+    .container-nav {
+
+        .row-nav {
+            max-width: 1440px;            
+        }
+
+        .logo {
+            background: rgba(255, 255, 255, 0.1);
+        }
+    }
+}

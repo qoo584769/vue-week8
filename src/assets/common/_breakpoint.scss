@@ -1,0 +1,19 @@
+$mobile:414px;
+$pad:768px;
+$pc:1200px;
+
+@mixin mobile {
+    @media screen and (min-width:$mobile) {
+        @content;
+    }
+}
+@mixin pad {
+    @media screen and (min-width:$pad) {
+        @content;
+    }
+}
+@mixin pc {
+    @media screen and (min-width:$pc) {
+        @content;
+    }
+}
