@@ -103,8 +103,9 @@ export default {
             if (res.data.success) {
               alert(res.data.message);
               router.push({ path: `/order/${res.data.orderId}` });
+            } else {
+              alert(res.data.message);
             }
-            alert(res.data.message);
           })
           .catch((err) => {
             alert(err.message);
