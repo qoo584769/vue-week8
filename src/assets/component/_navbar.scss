@@ -11,27 +11,27 @@
         justify-content: space-between;
         align-items: center;
 
-        background: rgba(255, 255, 255, 0.3);
+        background: rgba(255, 255, 255, 0.5);
     }
 
     .logo {
         font-family: 'Monoton', cursive;
         font-size: 48px;
 
-        background: rgba(255, 255, 255, 0.3);
+        background: rgba(255, 255, 255, 0.5);
     }
 
     .nav-item {
         display: flex;
 
-        background: rgba(255, 255, 255, 0.3);
+        background: rgba(255, 255, 255, 0.5);
     }
 
     .nav-item li {
         font-size: 24px;
         margin: 0 0 0 24px;
 
-        background: rgba(255, 255, 255, 0.3);
+        background: rgba(255, 255, 255, 0.5);
     }
 }
 
@@ -51,7 +51,7 @@
         }
 
         .logo {
-            background: rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.5);
         }
     }
 }
