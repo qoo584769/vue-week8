@@ -1,5 +1,6 @@
 <template>
-  <div class="container">
+<Navbar></Navbar>
+  <div class="container pt-5">
     <div class="row">
       <VForm v-slot="{ errors }" @submit="Checkout">
 
@@ -40,6 +41,7 @@
       </VForm>
     </div>
   </div>
+  <Footer></Footer>
 </template>
 
 <script>
@@ -53,8 +55,14 @@ import axios from 'axios';
 import {
   useRouter,
 } from 'vue-router';
+import Navbar from '@/components/front/Navbar.vue';
+import Footer from '@/components/front/Footer.vue';
 
 export default {
+  components: {
+    Navbar,
+    Footer,
+  },
   setup() {
     const CartListData = reactive({
       data: {},

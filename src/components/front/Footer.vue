@@ -1,6 +1,6 @@
 <template>
-  <div class="container bg-color">
-    <div class="row">
+  <div class="container-footer bg-color">
+    <div class="row-footer">
       <span class="footer-text">© 2021 H&F</span>
     </div>
 
@@ -32,6 +32,10 @@ export default {
 
   .bg-color {
     background: #ccc;
+  }
+
+  .row-footer {
+    text-align: center;
   }
 
   .footer-text {

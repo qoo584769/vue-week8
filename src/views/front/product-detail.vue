@@ -1,9 +1,10 @@
 <template>
-  <div class="container m-auto">
+  <Navbar></Navbar>
+  <div class="container m-auto pt-5">
     <div class="row">
       <div class="col">
 
-        <table class="table">
+        <table class="table ">
           <thead class="">
             <th class="" width:150>圖片</th>
             <th class="">名稱</th>
@@ -38,6 +39,7 @@
       </div>
     </div>
   </div>
+  <Footer></Footer>
 </template>
 
 <script>
@@ -49,8 +51,14 @@ import {
   useRoute,
 } from 'vue-router';
 import axios from 'axios';
+import Navbar from '@/components/front/Navbar.vue';
+import Footer from '@/components/front/Footer.vue';
 
 export default {
+  components: {
+    Navbar,
+    Footer,
+  },
   setup() {
     //   使用router的route
     const route = useRoute();
@@ -105,6 +113,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  @import '../../assets/_dashboard.scss';
+
   * {
     margin: 0;
     padding: 0;

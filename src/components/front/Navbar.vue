@@ -3,7 +3,8 @@
     <div class="row-nav">
 
       <div class="logo">
-        <span>H&F</span>
+        <router-link :to="{name:'index'}"> <span>H&F</span> </router-link>
+
       </div>
 
       <div>

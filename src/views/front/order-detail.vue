@@ -1,5 +1,6 @@
 <template>
-  <div class="container">
+<Navbar></Navbar>
+  <div class="container pt-5">
 
     <div class="row text-center">
       <p class="">
@@ -36,6 +37,7 @@
       <button type="button" class="btn" @click.prevent="OrderPay">確認結帳</button>
     </div>
   </div>
+  <Footer></Footer>
 </template>
 
 <script>
@@ -49,9 +51,14 @@ import {
 import {
   onMounted,
 } from '@vue/runtime-core';
+import Navbar from '@/components/front/Navbar.vue';
+import Footer from '@/components/front/Footer.vue';
 
 export default {
-
+  components: {
+    Navbar,
+    Footer,
+  },
   setup() {
     const route = useRoute();
     const router = useRouter();

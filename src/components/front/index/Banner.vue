@@ -1,7 +1,7 @@
 <template>
   <div class="parallax">
     <div class="banner-text">
-      <h2 class="banner-title">ikea標題</h2>
+      <h2 class="banner-title">首頁大圖文案</h2>
     </div>
   </div>
 </template>

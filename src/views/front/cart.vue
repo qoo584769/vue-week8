@@ -35,6 +35,10 @@
 
           <tfoot>
             <tr>
+              <td>
+                <input type="text" placeholder="請輸入優惠碼test3">
+                <button type="button">確認優惠碼</button>
+              </td>
               <td colspan="3" class="text-end">總計 : {{CartData.data.final_total}}</td>
             </tr>
           </tfoot>
@@ -44,6 +48,7 @@
       </div>
     </div>
   </div>
+  <Footer></Footer>
 </template>
 
 <script>
@@ -56,10 +61,12 @@ import {
   useRouter,
 } from 'vue-router';
 import Navbar from '@/components/front/Navbar.vue';
+import Footer from '@/components/front/Footer.vue';
 
 export default {
   components: {
     Navbar,
+    Footer,
   },
   setup() {
     const router = useRouter();

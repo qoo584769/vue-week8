@@ -2,6 +2,7 @@
   <Navbar></Navbar>
   <ProductNav></ProductNav>
   <ProductList></ProductList>
+  <Footer></Footer>
   <div>
 
   </div>
@@ -11,6 +12,7 @@
 import Navbar from '@/components/front/Navbar.vue';
 import ProductNav from '@/components/front/all-product/all-product-nav.vue';
 import ProductList from '@/components/front/all-product/product-list.vue';
+import Footer from '@/components/front/Footer.vue';
 
 export default {
 
@@ -18,6 +20,7 @@ export default {
     Navbar,
     ProductNav,
     ProductList,
+    Footer,
   },
 
   setup() {
