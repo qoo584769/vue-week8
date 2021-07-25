@@ -128,6 +128,7 @@ export default {
     const CouponCheck = () => {
       axios.post(`${process.env.VUE_APP_ALL_APIPATH}/coupon`, CouponText).then((res) => {
         if (res.data.success) {
+          GetCartList();
           alert(res.data.message);
         } else {
           alert(res.data.message);
